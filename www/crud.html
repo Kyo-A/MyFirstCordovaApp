@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/materialize.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo">Logo</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="crud.html">FAKE CRUD JS</a></li>
+                <li><a href="crud2.html">CRUD JQUERY</a></li>
+            </ul>
+        </div>
+    </nav>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="crud.html">FAKE CRUD JS</a></li>
+        <li><a href="crud2.html">CRUD JQUERY</a></li>
+    </ul>
+    <div class="container">
+        <h4>FAKE CRUD JS</h4>
+        <br>
+        <!-- Utiliser javaScript: void (0) pour empêcher la page de se recharger 
+            lorsque le bouton est cliqué pour la première fois. -->
+        <form action="javaScript:void(0)" method="post" onSubmit="app.add()">
+            <input class="validate" type="text" id="add-name" placeholder="Nouveau Pays">
+            <input class="btn waves-effect waves-light" type="submit" value="Ajouter">
+        </form>
+
+        <div id="spoiler" role="aria-hidden" hidden>
+            <form action="javaScript:void(0)" method="post" id="saveEdit">
+                <input class="validate" type="text" id="edit-name">
+                <input class="btn waves-effect waves-light" type="submit" value="Edit">
+                <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+            </form>
+        </div>
+        <br>
+        <p id="counter"></p>
+        <br>
+        <div class="row" id="countries">
+
+        </div>
+        <div class="fixed-action-btn">
+            <a class="btn-floating btn-large red">
+                <i class="large material-icons">mode_edit</i>
+            </a>
+            <ul>
+                <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+                <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+                <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+                <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="cordova.js"></script>
+    <script src="./js/index.js" asp-append-version="true"></script>
+    <script src="./js/materialize.js"></script>
+</body>
+
+</html>
